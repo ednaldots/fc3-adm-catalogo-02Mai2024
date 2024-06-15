@@ -1,0 +1,38 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Logs
+logs/
+*.log
+
+# Gradle
+.gradle/
+build/
+
+# Compiled class files
+*.class
+
+# Generated files
+*.jar
+*.war
+*.ear
+
+# Eclipse
+.project
+.classpath
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Docker
+docker-compose.override.yml
+.env
+
+# MySQL Data Directory
+mysql_data/
