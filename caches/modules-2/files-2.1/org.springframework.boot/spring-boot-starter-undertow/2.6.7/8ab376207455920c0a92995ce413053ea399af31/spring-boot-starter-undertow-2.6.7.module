@@ -1,0 +1,293 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.springframework.boot",
+    "module": "spring-boot-starter-undertow",
+    "version": "2.6.7",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.9.2",
+      "buildId": "7gqi4aagxzauxbkpytovts6a3u"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.undertow",
+          "module": "undertow-core",
+          "version": {
+            "requires": "2.2.17.Final"
+          }
+        },
+        {
+          "group": "io.undertow",
+          "module": "undertow-servlet",
+          "version": {
+            "requires": "2.2.17.Final"
+          },
+          "excludes": [
+            {
+              "group": "org.jboss.spec.javax.servlet",
+              "module": "jboss-servlet-api_4.0_spec"
+            },
+            {
+              "group": "org.jboss.spec.javax.annotation",
+              "module": "jboss-annotations-api_1.3_spec"
+            }
+          ]
+        },
+        {
+          "group": "io.undertow",
+          "module": "undertow-websockets-jsr",
+          "version": {
+            "requires": "2.2.17.Final"
+          },
+          "excludes": [
+            {
+              "group": "org.jboss.spec.javax.websocket",
+              "module": "jboss-websocket-api_1.1_spec"
+            },
+            {
+              "group": "org.jboss.spec.javax.servlet",
+              "module": "jboss-servlet-api_4.0_spec"
+            },
+            {
+              "group": "org.jboss.spec.javax.annotation",
+              "module": "jboss-annotations-api_1.3_spec"
+            }
+          ]
+        },
+        {
+          "group": "jakarta.servlet",
+          "module": "jakarta.servlet-api",
+          "version": {
+            "requires": "4.0.4"
+          }
+        },
+        {
+          "group": "jakarta.websocket",
+          "module": "jakarta.websocket-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        },
+        {
+          "group": "org.apache.tomcat.embed",
+          "module": "tomcat-embed-el",
+          "version": {
+            "requires": "9.0.62"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-starter-undertow-2.6.7.jar",
+          "url": "spring-boot-starter-undertow-2.6.7.jar",
+          "size": 4789,
+          "sha512": "d4e925980c6bc1c8081c32fa6adb018d58d2386f9ac72e9c19446c60be7d40444fabe6148373550af45cfb675bffc8eb65b70561af72e8eb72c50e48dcfe599f",
+          "sha256": "0060a3a1b43a878697f33500f30c854c2c08fa6d91a5aafece8c8b7cca8d37c4",
+          "sha1": "e53425b0571b5a05ae5d4fbf5ed820cbf431bd47",
+          "md5": "a43f46e9bd35d39964a58765df839554"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.undertow",
+          "module": "undertow-core",
+          "version": {
+            "requires": "2.2.17.Final"
+          }
+        },
+        {
+          "group": "io.undertow",
+          "module": "undertow-servlet",
+          "version": {
+            "requires": "2.2.17.Final"
+          },
+          "excludes": [
+            {
+              "group": "org.jboss.spec.javax.servlet",
+              "module": "jboss-servlet-api_4.0_spec"
+            },
+            {
+              "group": "org.jboss.spec.javax.annotation",
+              "module": "jboss-annotations-api_1.3_spec"
+            }
+          ]
+        },
+        {
+          "group": "io.undertow",
+          "module": "undertow-websockets-jsr",
+          "version": {
+            "requires": "2.2.17.Final"
+          },
+          "excludes": [
+            {
+              "group": "org.jboss.spec.javax.websocket",
+              "module": "jboss-websocket-api_1.1_spec"
+            },
+            {
+              "group": "org.jboss.spec.javax.servlet",
+              "module": "jboss-servlet-api_4.0_spec"
+            },
+            {
+              "group": "org.jboss.spec.javax.annotation",
+              "module": "jboss-annotations-api_1.3_spec"
+            }
+          ]
+        },
+        {
+          "group": "jakarta.servlet",
+          "module": "jakarta.servlet-api",
+          "version": {
+            "requires": "4.0.4"
+          }
+        },
+        {
+          "group": "jakarta.websocket",
+          "module": "jakarta.websocket-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        },
+        {
+          "group": "org.apache.tomcat.embed",
+          "module": "tomcat-embed-el",
+          "version": {
+            "requires": "9.0.62"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-starter-undertow-2.6.7.jar",
+          "url": "spring-boot-starter-undertow-2.6.7.jar",
+          "size": 4789,
+          "sha512": "d4e925980c6bc1c8081c32fa6adb018d58d2386f9ac72e9c19446c60be7d40444fabe6148373550af45cfb675bffc8eb65b70561af72e8eb72c50e48dcfe599f",
+          "sha256": "0060a3a1b43a878697f33500f30c854c2c08fa6d91a5aafece8c8b7cca8d37c4",
+          "sha1": "e53425b0571b5a05ae5d4fbf5ed820cbf431bd47",
+          "md5": "a43f46e9bd35d39964a58765df839554"
+        }
+      ]
+    },
+    {
+      "name": "mavenOptionalApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "spring-boot-starter-undertow-2.6.7.jar",
+          "url": "spring-boot-starter-undertow-2.6.7.jar",
+          "size": 4789,
+          "sha512": "d4e925980c6bc1c8081c32fa6adb018d58d2386f9ac72e9c19446c60be7d40444fabe6148373550af45cfb675bffc8eb65b70561af72e8eb72c50e48dcfe599f",
+          "sha256": "0060a3a1b43a878697f33500f30c854c2c08fa6d91a5aafece8c8b7cca8d37c4",
+          "sha1": "e53425b0571b5a05ae5d4fbf5ed820cbf431bd47",
+          "md5": "a43f46e9bd35d39964a58765df839554"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "org.springframework.boot",
+          "name": "spring-boot-starter-undertow-maven-optional",
+          "version": "2.6.7"
+        }
+      ]
+    },
+    {
+      "name": "mavenOptionalRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-starter-undertow-2.6.7.jar",
+          "url": "spring-boot-starter-undertow-2.6.7.jar",
+          "size": 4789,
+          "sha512": "d4e925980c6bc1c8081c32fa6adb018d58d2386f9ac72e9c19446c60be7d40444fabe6148373550af45cfb675bffc8eb65b70561af72e8eb72c50e48dcfe599f",
+          "sha256": "0060a3a1b43a878697f33500f30c854c2c08fa6d91a5aafece8c8b7cca8d37c4",
+          "sha1": "e53425b0571b5a05ae5d4fbf5ed820cbf431bd47",
+          "md5": "a43f46e9bd35d39964a58765df839554"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "org.springframework.boot",
+          "name": "spring-boot-starter-undertow-maven-optional",
+          "version": "2.6.7"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-starter-undertow-2.6.7-javadoc.jar",
+          "url": "spring-boot-starter-undertow-2.6.7-javadoc.jar",
+          "size": 4747,
+          "sha512": "a1c5df24eef8d37b7ab2c331f21d00e2a420eba41c0a790a181a7bfecf2590d49987ae0e7127ebccbea50b43016b6d5a9800093c6023e950d722a4f040efa068",
+          "sha256": "ef5257d41ab4623a2b6750aaa1b9a8bcf3a2e7cc04e81393e7070172fe00a3bd",
+          "sha1": "cbc23560f1cdd900d7542c3684be08a1881bf43e",
+          "md5": "f0c847a6d1ff541473f54f9eee004f90"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-starter-undertow-2.6.7-sources.jar",
+          "url": "spring-boot-starter-undertow-2.6.7-sources.jar",
+          "size": 4745,
+          "sha512": "132452b2244b263aee5f1edd7d66b380c0268d689653d3c8f7476f5bb74624c4bdcad905f886a383b0b14b839dd2d1317da42a6f18bb15c26aa880933e048c97",
+          "sha256": "87a15fed4d9bb585ab8ad05e4bea97081752e5db0062fc1197d5d9a70cc83134",
+          "sha1": "280b5cc8a341f6848940494ed9bd3fda14d8aa8d",
+          "md5": "426700b82a3e633a6e653c0bc9d4dbfa"
+        }
+      ]
+    }
+  ]
+}

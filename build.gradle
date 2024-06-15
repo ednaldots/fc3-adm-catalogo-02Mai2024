@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.6.7'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+group = 'com.fullcycle.admin.infrastructure'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(":domain")
+    implementation project(":application")
+    // Outras dependências comuns podem ser listadas aqui se necessário
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+

@@ -1,0 +1,78 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.springframework.boot' version '2.6.7'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.flywaydb.flyway' version '8.5.10'
+}
+
+group = 'com.fullcycle.admin.infrastructure'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+application {
+    mainClassName = 'com.fullcycle.admin.infrastructure.Main'
+}
+
+springBoot {
+    mainClass.set('com.fullcycle.admin.infrastructure.Main')
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(":domain")
+
+    // Logging com SLF4J
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'mysql:mysql-connector-java'
+
+    // MySQL Connector
+    runtimeOnly 'mysql:mysql-connector-java:8.0.28'
+
+    // Spring Boot Starters
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-undertow'
+
+    // Flyway for database migrations
+    implementation 'org.flywaydb:flyway-core'
+
+    // H2 Database for testing
+    testImplementation 'com.h2database:h2'
+
+    // Spring Boot Test Starter
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // JUnit 5
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    // Mockito for mocking in tests
+    testImplementation 'org.mockito:mockito-core:4.0.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:4.0.0'
+}
+
+flyway {
+    url = System.getenv('FLYWAY_DB') ?: 'jdbc:mysql://localhost:3306/adm_videos'
+    user = System.getenv('FLYWAY_USER') ?: 'root'
+    password = System.getenv('FLYWAY_PASS') ?: '123456'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "failed", "skipped"
+    }
+
+    // Excluindo slf4j-simple apenas durante os testes
+    configurations.runtimeClasspath {
+        exclude group: 'org.slf4j', module: 'slf4j-simple'
+    }
+}
